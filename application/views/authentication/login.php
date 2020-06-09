@@ -17,18 +17,18 @@
 
 			<div class="row">
 				<div class="checkbox icheck col-xs-12 col-sm-6 col-md-6">
-					<label>
+					<!-- <label>
                         <?php echo form_checkbox('remember_code', '1', false, 'id="remember_code"'); ?>
                         Ingat Saya
-                    </label>
+                    </label> -->
 				</div>
-				<div class="col-xs-12 col-sm-6 col-md-6" style="padding-bottom: 5px">
+				<div class="col-xs-12 col-sm-7 col-md-7" style="padding-bottom: 5px">
 					<button type="submit" name="submit" value="login" class="btn btn-primary btn-block btn-flat"><i class="fa fa-sign-in" aria-hidden="true"></i> Masuk</button>
 				</div>
 			</div>
-			<a href="<?php echo base_url('auth/forgot_password'); ?>"> Lupa Kata Sandi?</a><br>
-			<a href="<?php echo base_url('auth/register'); ?>"> Daftar Akun</a>
-			
+			<!-- <a href="<?php echo base_url('auth/forgot_password'); ?>"> Lupa Kata Sandi?</a><br>
+		 <a href="<?php echo base_url('auth/register'); ?>"> Daftar Akun</a> -->
+			 
 		</form>
 		
 	</div>
