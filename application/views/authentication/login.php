@@ -4,7 +4,7 @@
 	</div>
 	<!-- /.login-logo -->
 	<div class="login-box-body">
-		<p class="login-box-msg text-bold"> Masuk Dengan Email & Password Anda</p>
+		<p class="login-box-msg text-bold">Authentication required</p>
 		<form method="post" action="<?php echo base_url('auth/login'); ?>" role="login">
 			<div class="form-group has-feedback">
 				<input type="email" name="email" class="form-control" required minlength="5" placeholder="Email" />
