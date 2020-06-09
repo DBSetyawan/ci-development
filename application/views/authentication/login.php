@@ -42,7 +42,8 @@
 		</div>
 		<div class="box-body">
 			<b>E-mail</b> : daniel@mail.com (administrator) <span class="text-light-blue">default</span> <br> 
-			<b>Password</b> : daniel
+			<b>Password</b> : daniel <br /><br />
+			<b>Status user</b> : <span class="text-green">aktif</span>
 	</div> 
 </div>
 <script>

@@ -17,7 +17,7 @@ class Auth extends MY_Controller
         $password   = $this->input->post('password');
 
         $query = $this->Auth_model->check_account($username, $password);
-        print_r($query);
+        // var_dump( $query);
         if ($query === 1) {
             $this->session->set_flashdata('alert', '<p class="box-msg">
         			<div class="info-box alert-danger">
@@ -51,6 +51,7 @@ class Auth extends MY_Controller
         			</div>
         			</p>
               ');
+
         } else {
             
             $userdata = array(
@@ -67,27 +68,24 @@ class Auth extends MY_Controller
     
     public function login()
     {
+        
         $site = $this->Konfigurasi_model->listing();
         $data = array(
             'title'     => 'Login | CRUD testing',
             'favicon'   => '',
             'site'      => $site
         );
+        
         if ($this->session->userdata('id_role') == "1") {
             redirect('admin/home');
         }
-        if ($this->session->userdata('id_role') == "2") {
-            redirect('member/home');
-        }
-
+        
         if ($this->input->post('submit')) {
             $this->form_validation->set_rules('email', 'Email', 'trim|required|min_length[5]|max_length[50]');
             $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[5]|max_length[22]');
             $error = $this->check_account();
-
             if ($this->form_validation->run() && $error === true) {
                 $data = $this->Auth_model->check_account($this->input->post('email'), $this->input->post('password'));
-
                 if ($data->id_role == '1') {
                     redirect('admin/home');
                 } 

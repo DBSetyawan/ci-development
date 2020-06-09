@@ -22,17 +22,18 @@ class Auth_model extends CI_Model
     {
         $this->db->where('username', $username);
         $query = $this->db->get($this->table)->row();
-        print_r($query);
-        if (!$query) {
+        
+        if ($query->activated == 1) {
             return 1;
         }
-        if ($query->activated == 0) {
+
+        if ($query->activated == 2) {
             return 2;
         }
-        if ($query->activated == 2) {
+
+        if ($query->activated == 3) {
             return 3;
         }
-     
         return $query;
 	}
 	
